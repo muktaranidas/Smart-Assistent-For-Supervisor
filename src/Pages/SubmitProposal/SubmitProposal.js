@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import bgImage from "../../assets/images/appointment.png";
 
 const SubmitProposal = () => {
   const handleSubmitProjectProposal = (event) => {
@@ -12,16 +12,19 @@ const SubmitProposal = () => {
   };
 
   return (
-    <div className="h-[800px] flex justify-center items-center">
+    <div
+      style={{ background: `url(${bgImage})` }}
+      className="h-[800px] flex justify-center items-center"
+    >
       <div className="w-96 p-7">
-        <h2 className="text-2xl text-center my-4 font-bold">
+        <h2 className="text-2xl text-center text-white my-4 font-bold">
           Submit Your Proposal
         </h2>
 
         <form onSubmit={handleSubmitProjectProposal}>
-          <div className="form-control my-2 w-full max-w-xs">
+          <div className="form-control  my-2 w-full max-w-xs">
             <label className="label">
-              <span className="label-text">Name</span>
+              <span className="label-text text-white">Name</span>
             </label>
             <input
               type="text"
@@ -32,7 +35,7 @@ const SubmitProposal = () => {
           </div>
           <div className="form-control my-2 w-full max-w-xs">
             <label className="label">
-              <span className="label-text">Email</span>
+              <span className="label-text text-white">Email</span>
             </label>
             <input
               type="email"
@@ -43,7 +46,9 @@ const SubmitProposal = () => {
           </div>
           <div className="form-control w-full max-w-xs">
             <label className="label">
-              <span className="label-text">Project Proposal Title</span>
+              <span className="label-text  text-white">
+                Project Proposal Title
+              </span>
             </label>
             <input
               placeholder="Project Proposal Title"
@@ -53,7 +58,7 @@ const SubmitProposal = () => {
             />
           </div>
           <input
-            className="btn btn-accent my-4 w-full"
+            className="btn btn-secondary font-bold my-4 w-full"
             value="submit"
             type="submit"
           />
