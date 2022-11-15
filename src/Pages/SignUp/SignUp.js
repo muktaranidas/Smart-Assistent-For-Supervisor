@@ -12,7 +12,7 @@ const SignUp = () => {
     formState: { errors },
   } = useForm();
 
-  const { createUser, updateUser } = useContext(AuthContext);
+  const { createUser, signUpWithGoogle, updateUser } = useContext(AuthContext);
   const [signUpError, setSignUpError] = useState("");
 
   const handleSignUp = (data) => {
@@ -34,6 +34,14 @@ const SignUp = () => {
         console.error(err);
         setSignUpError(err.message);
       });
+  };
+  const handleGoogleSignUp = () => {
+    return signUpWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((err) => console.error(err));
   };
 
   return (
@@ -104,7 +112,9 @@ const SignUp = () => {
           </Link>
         </p>
         <div className="divider">OR</div>
-        <button className="btn btn-outline w-full">CONTINUE WITH GOOGLE</button>
+        <button onClick={handleGoogleSignUp} className="btn btn-outline w-full">
+          CONTINUE WITH GOOGLE
+        </button>
       </div>
     </div>
   );
