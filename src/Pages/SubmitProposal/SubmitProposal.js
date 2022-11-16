@@ -35,12 +35,45 @@ const SubmitProposal = () => {
           </div>
           <div className="form-control my-2 w-full max-w-xs">
             <label className="label">
+              <span className="label-text text-white">Id</span>
+            </label>
+            <input
+              type="text"
+              name="id"
+              placeholder="Your Id"
+              className="input input-bordered w-full max-w-xs"
+            />
+          </div>
+          <div className="form-control my-2 w-full max-w-xs">
+            <label className="label">
               <span className="label-text text-white">Email</span>
             </label>
             <input
               type="email"
               name="email"
               placeholder="Your Email"
+              className="input input-bordered w-full max-w-xs"
+            />
+          </div>
+          <div className="form-control my-2 w-full max-w-xs">
+            <label className="label">
+              <span className="label-text text-white">Department</span>
+            </label>
+            <input
+              type="text"
+              name="department"
+              placeholder="Department"
+              className="input input-bordered w-full max-w-xs"
+            />
+          </div>
+          <div className="form-control my-2 w-full max-w-xs">
+            <label className="label">
+              <span className="label-text text-white">Faculty</span>
+            </label>
+            <input
+              type="text"
+              name="faculty"
+              placeholder="Faculty"
               className="input input-bordered w-full max-w-xs"
             />
           </div>
@@ -57,6 +90,17 @@ const SubmitProposal = () => {
               className="input input-bordered w-full max-w-xs"
             />
           </div>
+          <div className="form-control w-full max-w-xs">
+            <label className="label">
+              <span className="label-text  text-white">Project Details</span>
+            </label>
+            <textarea
+              name="projectDetails"
+              className="textarea"
+              placeholder="Project Details"
+            ></textarea>
+          </div>
+
           <input
             className="btn btn-secondary font-bold my-4 w-full"
             value="submit"
