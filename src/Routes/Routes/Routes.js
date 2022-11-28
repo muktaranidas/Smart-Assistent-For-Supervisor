@@ -1,13 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Layout/Main";
-import AboutNav from "../../Pages/AboutNav/AboutNav";
+import AcceptOrRejectProject from "../../Pages/AcceptOrRejectProject/AcceptOrRejectProject";
+import CheckProjectReport from "../../Pages/CheckProjectReport/CheckProjectReport";
+import CheckProposal from "../../Pages/CheckProposal/CheckProposal";
 import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
+import SubmitFinalProposal from "../../Pages/SubmitFinalProposal/SubmitFinalProposal";
 import SubmitProposal from "../../Pages/SubmitProposal/SubmitProposal";
-import ViewProposal from "../../Pages/ViewProposal/ViewProposal";
-import ViewReport from "../../Pages/ViewReport/ViewReport";
+
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
@@ -28,12 +30,20 @@ export const router = createBrowserRouter([
         element: <SubmitProposal></SubmitProposal>,
       },
       {
-        path: "/view-proposal",
-        element: <ViewProposal></ViewProposal>,
+        path: "/check-proposal",
+        element: <CheckProposal></CheckProposal>,
       },
       {
-        path: "/view-report",
-        element: <ViewReport></ViewReport>,
+        path: "/check-project-report",
+        element: <CheckProjectReport></CheckProjectReport>,
+      },
+      {
+        path: "/accept-or-reject",
+        element: <AcceptOrRejectProject></AcceptOrRejectProject>,
+      },
+      {
+        path: "/submit-final-proposal",
+        element: <SubmitFinalProposal></SubmitFinalProposal>,
       },
 
       {

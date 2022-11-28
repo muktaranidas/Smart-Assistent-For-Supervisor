@@ -14,34 +14,50 @@ const Navbar = () => {
 
   const menuItems = (
     <React.Fragment>
-      <li>
+      <li className="bg-slate-500 text-white font-bold mr-2 rounded">
         <Link to="/home">Home</Link>
       </li>
 
       {user?.uid ? (
         <>
-          <li>
-            <Link to="/submit-proposal">SubmitProposal</Link>
+          <li className="bg-slate-500 text-white font-bold mr-2 rounded">
+            <Link to="/submit-proposal">
+              Submit <br /> Proposal
+            </Link>
           </li>
-          <li>
-            <Link to="/view-proposal">ViewProposal</Link>
+          <li className="bg-slate-500 text-white font-bold mr-2 rounded">
+            <Link to="/check-proposal">
+              Check <br /> Proposal
+            </Link>
           </li>
-          <li>
-            <Link to="/view-report">ViewReport</Link>
+          <li className="bg-slate-500 text-white font-bold mr-2 rounded">
+            <Link to="/submit-final-proposal">
+              Submit <br /> Final Proposal
+            </Link>
           </li>
-          <li>
+          <li className="bg-slate-500 text-white font-bold mr-2 rounded">
+            <Link to="/check-project-report">
+              CheckProject <br /> Report
+            </Link>
+          </li>
+          <li className="bg-slate-500 text-white font-bold mr-2 rounded">
+            <Link to="/accept-or-reject">
+              AcceptOr <br /> Reject Project
+            </Link>
+          </li>
+          <li className="bg-slate-500 text-white font-bold mr-2 rounded">
             <Link to="dashboard">Dashboard</Link>
           </li>
-          <li>
+          <li className="bg-slate-500 text-white font-bold mr-2 rounded">
             <button onClick={handleLogOut}>SignOut</button>
           </li>
         </>
       ) : (
         <>
-          <li>
+          <li className="bg-slate-500 text-white font-bold mr-2 rounded">
             <Link to="/login">Login</Link>
           </li>
-          <li>
+          <li className="bg-slate-500 text-white font-bold mr-2 rounded">
             <Link to="/signup">SignUp</Link>
           </li>
         </>
@@ -81,7 +97,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal p-0">{menuItems}</ul>
+        <ul className="menu  menu-horizontal p-0">{menuItems}</ul>
       </div>
     </div>
   );
